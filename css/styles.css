@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Jumbotron */
+#jumbotron {
+    padding-top: 10rem;
+    background-color: #111010;
+}
+
+/* About Section */
+#About {
+    background-color: #3E3D3D;
+}
+
+/* Portfolio Section */
+#portofolio {
+    background-color: #FCBF9D;
+}
+
+.card-image {
+    border: 3px solid #ED7620;
+    border-radius: 20px;
+}
+
+/* Blog Section */
+#blog {
+    background-color: #3E3D3D;
+}
+
+.card-img-blur {
+    filter: blur(2px);
+}
+
+.card-img-overlay {
+    pointer-events: none;
+    margin-top: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    width: 150px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #111010;
+    height: 600px;
+}
+
+.card-img-top-custom {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+/* Name Animation */
+#name {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes animasiname {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Profile Animation */
+#img-profile {
+    opacity: 0;
+    transform: translateX(0px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes imgprofile {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-440px);
+    }
+}
+
+#name.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#img-profile.fade-in.visible {
+    opacity: 1;
+    transform: translateX(-440px);
+}
+
+/* About Section Animations */
+.about-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-img {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.about-text {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Hover Effects */
+.card-hover {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-hover.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-hover:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #ff7f50;
+}
+
+/* Portfolio Card Animation */
+.card-portof {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.card-portof.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.card-portof.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-portof:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Blog Card Animation */
+.card-blog {
+    background-color: #343a40;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    will-change: transform, box-shadow, opacity;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.card-blog:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-blur {
+    filter: blur(2px);
+    transition: filter 0.3s ease;
+    will-change: filter;
+}
+
+.card-blog:hover .card-img-blur {
+    filter: blur(0px);
+}
+
+.card-title {
+    color: #FFD700;
+}
+
+.blur-text {
+    filter: blur(4px);
+    transition: filter 0.3s ease;
+    will-change: filter;
+}
+
+.list-group-item {
+    background-color: #495057;
+    color: #f8f9fa;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    will-change: background-color, color;
+}
+
+.card-blog.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
+}
+
+.card-blog.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Contact Card Animation */
+.card-custom-contact {
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #3E3D3D;
+    height: 300px;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom-contact.hidden {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.card-custom-contact.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* WhatsApp, Telegram, Instagram Cards */
+.card-whatsapp, .card-telegram, .card-instagram {
+    animation: card 0.7s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-whatsapp:hover, .card-telegram:hover, .card-instagram:hover {
+    transform: translateY(20px);
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    border-color: #128C7E;
+}
+
+/* Telegram Button */
+.btn-telegram {
+    background-color: #0088cc;
+    border-color: #0088cc;
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-telegram:hover {
+    background-color: #005A8D;
+    border-color: #005A8D;
+}
+
+/* Instagram Button */
+.btn-instagram {
+    background-color: #E1306C;
+    border-color: #E1306C;
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-instagram:hover {
+    background-color: #C13584;
+    border-color: #C13584;
+}
+
+/* RESPONSIVE DESIGN */
+

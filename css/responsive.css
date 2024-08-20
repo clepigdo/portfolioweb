@@ -1,0 +1,9 @@
+@media screen and (max-width: 943px){
+    #name {
+        
+    }
+    .img-profile {
+        display : flex;
+        margin : 20px;
+    }
+}
